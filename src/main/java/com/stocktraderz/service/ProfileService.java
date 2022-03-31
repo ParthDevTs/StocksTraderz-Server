@@ -12,8 +12,8 @@ public class ProfileService {
 	@Autowired
 	private ProfileRepository profileRepository;
 
-	public void createProfile(Profile profile) {
-		profileRepository.save(profile);
+	public Profile createProfile(Profile profile) {
+		return profileRepository.save(profile);
 	}
 
 	public String updateProfile(String id, Profile profile) {
