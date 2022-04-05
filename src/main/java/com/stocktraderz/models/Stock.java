@@ -1,5 +1,6 @@
 package com.stocktraderz.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class Stock {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String shortName;
+	@Column(name="stockName")
 	private String name;
 	private String market;
 	private float highPrice;

@@ -30,6 +30,7 @@ public class StockController {
 	@RequestMapping(method = RequestMethod.POST, value = "/profile/{profileId}/stocks")
 	public void addStockToProfile(@RequestBody Stock stock, @PathVariable String profileId) throws StockTraderzException {
 		stockService.addStockToPofile(stock, profileId);
+
 	}
 	
 	
