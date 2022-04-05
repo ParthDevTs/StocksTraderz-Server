@@ -12,7 +12,6 @@ public class Stock {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String shortName;
 	@Column(name="stockName")
 	private String name;
 	private String market;
@@ -25,10 +24,9 @@ public class Stock {
 		
 	}
 
-	public Stock(long id, String shortName, String name, String market, float highPrice, float lowPrice, float buyPrice,
+	public Stock(long id,  String name, String market, float highPrice, float lowPrice, float buyPrice,
 			String profileId) {
 		this.id = id;
-		this.shortName = shortName;
 		this.name = name;
 		this.market = market;
 		this.highPrice = highPrice;
@@ -47,16 +45,6 @@ public class Stock {
 		this.id = id;
 	}
 
-
-	public String getShortName() {
-		return shortName;
-	}
-
-
-
-	public void setShortName(String shortName) {
-		this.shortName = shortName;
-	}
 
 
 	public String getName() {
@@ -115,7 +103,7 @@ public class Stock {
 
 	@Override
 	public String toString() {
-		return "Stock [id=" + id + ", shortName=" + shortName + ", name=" + name + ", market=" + market + ", highPrice="
+		return "Stock [id=" + id + ", name=" + name + ", market=" + market + ", highPrice="
 				+ highPrice + ", lowPrice=" + lowPrice + ", buyPrice=" + buyPrice + ", profileId=" + profileId + "]";
 	}
 

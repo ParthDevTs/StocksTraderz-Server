@@ -84,6 +84,7 @@ public class StockService {
 			profileRepository.save(profile);
 
 		} else {
+			//Check if stock already exists then add
 			savedStockList.add(stock);
 			profile.setStocks(savedStockList);
 			profileRepository.save(profile);
